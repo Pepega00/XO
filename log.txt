@@ -1,0 +1,78 @@
+Sun Nov 19 23:00:33 2023
+	server launched
+Sun Nov 19 23:00:36 2023
+	player 1 connected
+Sun Nov 19 23:00:38 2023
+	player 2 connected
+Sun Nov 19 23:00:38 2023
+	player 1 is O,player 2 is X
+Sun Nov 19 23:00:46 2023
+	player X logged in
+Sun Nov 19 23:00:53 2023
+	player O logged in
+Sun Nov 19 23:00:57 2023
+	player X made a turn (cell 5)
+Sun Nov 19 23:00:59 2023
+	player O made a turn (cell 1)
+Sun Nov 19 23:01:09 2023
+	player X timed out
+Sun Nov 19 23:01:09 2023
+	closing the server
+Sun Nov 19 23:44:27 2023
+	server launched
+Sun Nov 19 23:45:11 2023
+	server launched
+Sun Nov 19 23:46:02 2023
+	server launched
+Sun Nov 19 23:47:51 2023
+	server launched
+Sun Nov 19 23:50:00 2023
+	server launched
+Sun Nov 19 23:50:41 2023
+	server launched
+Sun Nov 19 23:50:50 2023
+	server launched
+Sun Nov 19 23:52:14 2023
+	server launched
+Sun Nov 19 23:53:37 2023
+	server launched
+Sun Nov 19 23:55:27 2023
+	server launched
+Sun Nov 19 23:55:31 2023
+	player 1 connected
+Sun Nov 19 23:55:34 2023
+	player 2 connected
+Sun Nov 19 23:55:34 2023
+	player 1 is O,player 2 is X
+Sun Nov 19 23:55:43 2023
+	player O logged in
+Sun Nov 19 23:55:51 2023
+	player X logged in
+Sun Nov 19 23:55:51 2023
+	starting the game
+Sun Nov 19 23:56:01 2023
+	player X timed out
+Sun Nov 19 23:56:01 2023
+	game finished
+Sun Nov 19 23:56:01 2023
+	closing the server
+Sun Nov 19 23:56:14 2023
+	server launched
+Sun Nov 19 23:56:17 2023
+	player 1 connected
+Sun Nov 19 23:56:18 2023
+	player 2 connected
+Sun Nov 19 23:56:18 2023
+	player 1 is O,player 2 is X
+Sun Nov 19 23:56:24 2023
+	player O logged in
+Sun Nov 19 23:56:32 2023
+	player X logged in
+Sun Nov 19 23:56:32 2023
+	starting the game
+Sun Nov 19 23:56:33 2023
+	player X timed out
+Sun Nov 19 23:56:33 2023
+	game finished
+Sun Nov 19 23:56:33 2023
+	closing the server
