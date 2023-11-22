@@ -196,15 +196,8 @@ void read_config(int& port,int& time_limit){
         }
     }
 }
-void registration(int X_Socket,int O_Socket){
-    int buf_size=1024;
-    char buffer[1024]={0};
+void read_database(std::string nicknames[],std::string passwords[],int& db_counter){
     std::ifstream database("database.txt");
-    std::string nicknames[50];
-    std::string passwords[50];
-    bool is_online[50]={0};
-    int db_counter=0;
-    char mychar=0;
     while(database.peek()!=EOF){
         char line [50]={0};
         database.getline(line,50);
@@ -221,6 +214,21 @@ void registration(int X_Socket,int O_Socket){
         ++db_counter;
     }
     database.close();
+}
+void write_buffer(char* buffer){
+    for(int i=0;buffer[i]!=0 && i<1024;++i){
+        std::cout<<buffer[i];
+    }
+    std::cout<<'\n';
+}
+void registration(int X_Socket,int O_Socket){
+    int buf_size=1024;
+    char buffer[1024]={0};
+    std::string nicknames[50];
+    std::string passwords[50];
+    bool is_online[50]={0};
+    int db_counter=0;
+    read_database(nicknames,passwords,db_counter);
     bool X_signing_in=false;
     bool O_signing_in=false;
     int X_progress=0;
