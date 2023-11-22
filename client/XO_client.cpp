@@ -1,18 +1,7 @@
-// C program for the Client Side
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
- 
-// inet_addr
 #include <arpa/inet.h>
 #include <unistd.h>
- 
-// For threading, link with lpthread
-#include <pthread.h>
-#include <semaphore.h>
-
 #include <iostream>
+#include <cstring>
 #include <string>
 #include <fstream>
 class cell
@@ -257,10 +246,7 @@ void registration(int network_socket,bool& X_player){
         }
     }
 }
-// Driver Code
-int main()
-{
-    int port=0;
+void read_config(int& port){
     std::ifstream config_file("clientconfig.txt");
     std::string tmp_line;
     getline(config_file,tmp_line);
@@ -270,6 +256,13 @@ int main()
             port*=10;
         }
     }
+}
+// Driver Code
+int main()
+{
+    int port=0;
+    read_config(port);
+
     int network_socket;
  
     // Create a stream socket

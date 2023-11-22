@@ -1,15 +1,7 @@
-// C program for the Server Side
- 
-// inet_addr
+ // inet_addr
 #include <arpa/inet.h>
  
-// For threading, link with lpthread
-#include <pthread.h>
-#include <semaphore.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
+#include <cstring>
 #include <unistd.h>
 
 #include <fstream>
@@ -203,8 +195,6 @@ void read_config(int& port,int& time_limit){
             time_limit*=10;
         }
     }
-    std::cout<<"port = "<<port<<'\n';
-    std::cout<<"timeout time = "<<time_limit<<'\n';
 }
 void registration(int X_Socket,int O_Socket){
     int buf_size=1024;
@@ -218,37 +208,31 @@ void registration(int X_Socket,int O_Socket){
     while(database.peek()!=EOF){
         char line [50]={0};
         database.getline(line,50);
-        // std::cout<<line<<'\n';
         int counter=0;
         while(line[counter]!=' '){
-            //std::cout<<mychar;
             nicknames[db_counter]+=line[counter];
             ++counter;
         }
         ++counter;
         while(line[counter]!=0 && counter<50){
-            //std::cout<<mychar;
             passwords[db_counter]+=line[counter];
             ++counter;
         }
         ++db_counter;
     }
-    // for(int i=0;i<db_counter;++i){
-    //     std::cout<<i<<":"<<nicknames[i]<<" "<<passwords[i]<<'\n';
-    // }
     database.close();
     bool X_signing_in=false;
     bool O_signing_in=false;
     int X_progress=0;
     int O_progress=0;
-    int X_account_num=-1;
-    int O_account_num=-1;
-    std::string X_nickname;
-    std::string O_nickname;
     //0 : choosing between signing in and logging in
     //1 : writing username
     //2 : writing password
     //3 : successful registration
+    int X_account_num=-1;
+    int O_account_num=-1;
+    std::string X_nickname;
+    std::string O_nickname;
     while(X_progress<3 || O_progress<3){
         fd_set s;
         struct timeval timeout;
